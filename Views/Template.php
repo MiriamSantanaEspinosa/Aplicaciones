@@ -1,127 +1,90 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JAZMIN
- * Date: 10/05/2018
- * Time: 11:56 AM
- */
 
 namespace Views;
 
 
-use http\Url;
-
+new Template();
 class Template
 {
     public static function header()
     {
        ?>
         <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Habitaciones</title>
-            <!--Import Google Icon Font-->
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SaveInfo</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
 
-            <!--Import materialize.css-->
-            <link type="text/css" rel="stylesheet" href="<?php echo URL?>Public/css/materialize.min.css"  media="screen,projection"/>
+    <link href="Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="Public/css/grayscale.min.css" rel="stylesheet">
+</head>
 
-            <!--Aquí van los escripts-->
-            <script type="text/javascript" src="<?php echo URL?>Public/js/plugins/jquery-1.11.2.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL?>Public/js/plugins/materialize.min.js"></script>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">SaveInfo</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#hace">Que hacemos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#info">Informes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contac">Contactanos</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            <!--            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>-->
-            <script type="text/javascript" src="<?php echo URL?>Public/js/plugins/pagination.js"></script>
-            <script type="text/javascript" src="<?php echo URL?>Public/js/plugins/pagination.js"></script>
-            <script type="text/javascript" src="<?php echo URL?>Public/js/plugins/jquery.validate.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL?>Public/js/plugins/uifilter.js"></script>
-
-            <script type="text/javascript">
-                $('document').ready(function () {
-                    $(".button-collapse").sideNav();
-                    $('.tooltipped').tooltip();
-                })
-                $.validator.setDefaults({ ignore: [],
-                    errorClass: 'invalid',
-                    validClass: "valid",
-                });
-                jQuery.validator.addMethod("lettersonly", function(value, element) {
-                    return this.optional(element) || /^[a-z, ]+$/i.test(value);
-                }, "Solo Letras");
-            </script>
-            <!--Let browser know website is optimized for mobile-->
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        </head>
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1 class="mx-auto my-0 text-uppercase">SaveInfo</h1>
+            <h2 class="text-blue-50 mx-auto mt-2 mb-5">La nueva manera de guardar tu información</h2>
+            <a href="#modal_sesion" class="btn btn-primary js-scroll-trigger" id="sesion">Iniciar Sesión</a>
+        </div>
+    </div>
+</header>
 
         <body>
-        <nav>
-            <div class="nav-wrapper teal">
-                <a href="#!" class="brand-logo">Logo</a>
 
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#!">Reservaciones</a></li>
-                    <li><a href="#!">Mi Reserva</a></li>
-                    <li><a href="<?php echo URL?>Login">Login</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <ul id="slide-out" class="side-nav">
-            <li><div class="user-view">
-                    <div class="background">
-                        <img src="images/office.jpg">
-                    </div>
-                    <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-                    <a href="#!name"><span class="white-text name">John Doe</span></a>
-                    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-                </div></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-            <li><a href="#!">Second Link</a></li>
-            <li><div class="divider"></div></li>
-            <li><a class="subheader">Subheader</a></li>
-            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-
-
-
-        <!--Import jQuery before materialize.js-->
-
-
-
-
+        <main>
         <?php
     }
+
     public static function footer()
     {
         ?>
-        <footer class="page-footer teal">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Ubicación</h5>
-                        <p class="grey-text text-lighten-4">Carretera Federal Valle de Bravo Km 30,
-                            Ejido San Antonio Laguna, 51200 Valle de Bravo, Méx.</p>
-
-                    </div>
-                    <div class="col l3 s12">
-                        <h5 class="white-text">Redes Sociales</h5>
-                        <ul>
-                            <i class="material-icons">group</i>
-                            <i class="material-icons">group</i>
-                            <i class="material-icons">group</i>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    2018
-                </div>
-            </div>
-        </footer>
+        </main>
         </body>
+        <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+        Todos los derechos reservados SaveInfo TESVB 2018
+    </div>
+</footer>
+
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    <script src="Public/vendor/jquery/jquery.min.js"></script>
+    <script src="Public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Public/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="Public/js/grayscale.min.js"></script>
+        <!------------------------------------------------------------>
+
         </html>
         <?php
     }
 }
+
