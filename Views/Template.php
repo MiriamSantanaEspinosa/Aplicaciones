@@ -23,11 +23,7 @@ class Template
             <link href="<?php echo URL?>/Public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
             <link href="<?php echo URL?>/Public/css/grayscale.css" rel="stylesheet">
             <link rel="stylesheet" href="<?php echo URL?>/Public/Style2.css">
-
-
-
-
-
+            <link rel="stylesheet" href="<?php echo URL?>/Public/EstiloLogin.css">
 
             <script type="text/javascript" src="<?php echo URL?>/Public/js/bootstrap.bundle.min.js"></script>
             <script type="text/javascript" src="<?php echo URL?>/Public/js/bootstrap.js"></script>
@@ -65,11 +61,12 @@ class Template
                     </div>
                 </div>
             </nav>
-
-
         </main>
-        <!------------------------------------------------------------>
+
+
+
         </html>
+
         <?php
     }
     public function footer(){

@@ -4,7 +4,7 @@ define('DS',DIRECTORY_SEPARATOR);
 define('ROOT',realpath(dirname(__FILE__)).DS);
 
 
-define('URL',"http://localhost/Aplicaciones");
+define('URL',"http://localhost/Aplicaciones/");
 
 require_once ("AppData/Config/Autoload.php");
 \AppData\Config\Autoload::run();

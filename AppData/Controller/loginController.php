@@ -38,7 +38,7 @@ class loginController
             }
             else {
                 $_SESSION["error_login"] = "los datos no coinciden con nuestros registros";
-                header("Location:" . URL . "Login");
+                header("Location:" . URL . "login");
             }
         }
     }

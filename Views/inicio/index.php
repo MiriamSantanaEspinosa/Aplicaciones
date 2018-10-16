@@ -6,7 +6,9 @@
  * Time: 09:39 PM
  */
 ?>
-<nav id="logo">
+
+
+<div id="logo">
     <div class="masthead">
         <div class="container d-flex h-100 align-items-center">
             <div class="mx-auto text-center" >
@@ -16,14 +18,16 @@
                 <div class="nav-wrapper cyan lighten-2">
                     <?php if(!isset($_SESSION["username"]))
                     {?>
-                        <a href="<?php echo URL?>/Views/Login" class="btn btn-primary js-scroll-trigger" id="sesion">Iniciar Sesión</a>
+                    <div class="container">
+                        <a  href="<?php echo URL?>login" class="btn btn-primary js-scroll-trigger" id="sesion">Iniciar Sesión</a>
+                    </div>
                     <?php }?>
                 </div>
+
             </div>
         </div>
     </div>
-
-</nav>
+</div>
 
 
 

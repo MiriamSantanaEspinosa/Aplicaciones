@@ -22,8 +22,8 @@ class Request
             $ruta = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
             $ruta = explode("/", $ruta);
             $ruta = array_filter($ruta);
-            //print_r($ruta); //sirve para imprimir arreglos
-            if ($ruta[0] == "index.php")
+            print_r($ruta); //sirve para imprimir arreglos
+            if ($ruta[0] == "index.php" || $ruta[0] == "index")
             {
                 $this->controlador = "inicio";
             }
