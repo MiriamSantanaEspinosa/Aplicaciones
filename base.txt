@@ -1,0 +1,17 @@
+create table personas (id_persona int primary key, nombre varchar(20), ap_p varchar(20), ap_m varchar(20), id_usuario int, edad int, id_sexo int);
+create table usuarios (id_usuario int primary key, nickname varchar(20), pass varchar(20), id_tipo_usuario int);
+create table sexos (id_sexo int primary key, descripcion varchar(20));
+create table tipos_usuarios (id_tipo_usuario int primary key, descripcion varchar(20));
+
+
+insert into sexos values (10, 'Masculino');
+insert into sexos values (11, 'Femenino');
+
+insert into tipos_usuarios values (20, 'Administrador');
+insert into tipos_usuarios values (21, 'Usuario');
+
+insert into Usuarios values (20, 'Alex', '123456789',21);
+insert into Usuarios values (21, 'Mary', '123456789',20);
+
+insert into personas values (40,'Alexander','Orozco','Salmeron', 21, 22, 10 );
+insert into personas values (41,'Maricruz','Valdez','Camacho', 20, 21, 11 );
