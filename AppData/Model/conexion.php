@@ -10,7 +10,7 @@ class conexion
 
     function __construct()
     {
-        $this->conexion=new \mysqli($this->datos["server"],$this->datos["user"], $this->datos["password"],$this->datos["saveinfo"]);
+        $this->conexion=new \mysqli($this->datos["server"],$this->datos["user"], $this->datos["password"],$this->datos["db"]);
         $this->conexion->set_charset("utf8");
     }
 

@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<!------------------------------------------------------------------------------->
-<html lang="en">
-<meta charset="UTF-8">
-<head>
-
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="<?php echo URL?>/Public/EstiloLogin.css">
-
-
-</head>
 <body id="LoginForm">
 <div class="container">
-    <h1 class="form-heading">Inicio de sesión</h1>
+    <h1 class="form-heading"></h1>
     <div class="login-form">
         <div class="main-div">
             <div class="panel">
-                <h2></h2>
+                <h2>Inicio de sesión</h2>
                 <p>Por favor coloca tu cuenta y contraseña</p>
             </div>
             <form id="Login">
@@ -28,18 +16,16 @@
                     <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Login</button>
-                <button type="submit" class="btn btn-primary" href="<?php URL ?> login/regisrto">Registrar</button>
+                <div class="form-group">
+                    <button type="submit" id="signin" class="btn btn-primary">Entrar</button>
+                </div>
+
+                <div class="container">
+                    <p class="text text-black-50 mx-auto mt-2 mb-10">¿Aún no tienes cuenta con nosotros?</p>
+                    <a  href="<?php echo URL?>login/registrar" class="btn btn-primary js-scroll-trigger" id="signin">Registrate</a>
+                </div>
             </form>
         </div>
     </div>
 </div>
 </body>
-
-</div>
-</html>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-

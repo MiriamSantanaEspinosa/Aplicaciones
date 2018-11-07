@@ -6,8 +6,6 @@
  * Time: 09:39 PM
  */
 ?>
-
-
 <div id="logo">
     <div class="masthead">
         <div class="container d-flex h-100 align-items-center">
@@ -23,7 +21,6 @@
                     </div>
                     <?php }?>
                 </div>
-
             </div>
         </div>
     </div>

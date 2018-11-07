@@ -38,7 +38,6 @@ class Template
 
     <body>
         <main>
-
             <title>SaveInfo</title>
             <nav class=" bg navbar navbar-expand-lg navbar-light bg-info fixed-top text-white"  >
                 <div class="container">
@@ -62,9 +61,6 @@ class Template
                 </div>
             </nav>
         </main>
-
-
-
         </html>
 
         <?php
@@ -74,7 +70,9 @@ class Template
         <footer class="container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-bottom">
                 <div class="container">
-                    <p class="  text-white">Todos los derechos reservados SaveInfo TESVB 2018</p>
+
+                    <p class="  text-white ">Todos los derechos reservados SaveInfo TESVB 2018</p>
+
                 </div>
             </nav>
 
