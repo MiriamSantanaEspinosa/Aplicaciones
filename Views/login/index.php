@@ -9,12 +9,25 @@
             </div>
             <form id="Login">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="cuenta" placeholder="Numero de cuenta">
+                    <input type="text" class="form-control" id="cuenta" placeholder="Nombre">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Apellido Paterno">
                 </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Apellido Materno">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="inputPassword" placeholder="Edad">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputPassword" placeholder="Sexo">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="inputPassword" placeholder="Usuario">
+                </div>
+
 
 
                 <div class="form-group">
