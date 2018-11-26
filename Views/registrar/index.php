@@ -15,44 +15,44 @@
                 <h2>Registrate</h2>
                 <p>Coloca tus datos</p>
             </div>
-            <form id="regitro" class="form-singin" action="<?php echo URL ?>login/guardar" method="post" enctype="multipart/form-data" autocomplete="off">
+            <form id="registrar" class="form-singin" action="<?php echo URL?>registrar/guarda" method="post" enctype="multipart/form-data" autocomplete="off">
                 <div class=""nav-wrapper cyan lighten-2"">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="ap_paterno" placeholder="Apellido paterno" value="" required>
+                        <input type="text" class="form-control" id="ap_p" name="ap_p" placeholder="Apellido paterno" value="" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="ap_materno" placeholder="Apellido materno" value="" required>
+                        <input type="text" class="form-control" id="ap_m" name="ap_m" placeholder="Apellido materno" value="" required>
                     </div>
 
                     <div class="form-group">
-                        <input type="number" class="form-control" id="edad" placeholder="Edad" value="" required>
+                        <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad" value="" required>
                     </div>
 
-                    <select class="form-control" name="id_sexo">
+                    <select class="form-control" name="id_sexo" id="id_sexo">
                         <option value="">Selecciona Sexo</option>
                         <?php
                         if(isset($datos[0])){
                             while($fila = mysqli_fetch_assoc($datos[0])){ ?>
-                                <option value="<?php echo $fila['id_sexo'] ?>"><?php echo $fila['descripcion'] ?></option>
+                                <option value=" <?php echo $fila['id_sexo'] ?>"> <?php echo $fila['descripcion'] ?> </option>
                             <?php }
                         }
                         ?>
                     </select>
 
                     <div>
-                        <input type="text" class="form-control" id="nickname" placeholder="Nickname" value="">
+                        <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Nickname" value="">
                     </div>
 
                     <div>
-                        <input type="password" class="form-control" id="contraseña" placeholder="Constraseña" value="">
+                        <input type="password" class="form-control" id="pass"name="pass" placeholder="Constraseña" value="">
                     </div>
 
-                    <select class="form-control" name="id_tipo_usuario">
+                    <select class="form-control" name="id_tipo_usuario" id="id_tipo_usuario">
                         <option value="">Selecciona Tipo Usuario</option>
                         <?php
                         if(isset($datos[1])){
@@ -65,7 +65,7 @@
 
                     <br>
                     <div class="container">
-                        <a id="registrar" class="btn btn-primary" href="<?php echo URL?>login">Completar registro</a>
+                        <a id="registrar" type="submit" class="btn btn-primary" href="">Completar registro</a>
                     </div>
                 </div>
             </form>
@@ -73,3 +73,11 @@
     </div>
 </div>
 </body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#registrar").click(function(){
+            $("#registro").submit();
+        });
+    })
+</script>

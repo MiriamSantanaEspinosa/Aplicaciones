@@ -9,7 +9,7 @@ class Request{
             $ruta = explode("/",$ruta); //Se empieza a crear el array utilizando explode para delimitar y dividirlo en un array
             $ruta = array_filter($ruta);//Se crea otro filtro
             if($ruta[0]=="index.php" || $ruta[0]=="index")
-                $this->Controlador="Login";
+                $this->Controlador="login";
             else
                 $this->Controlador = strtolower(array_shift($ruta));
             $this->Metodo = strtolower(array_shift($ruta));

@@ -5,18 +5,14 @@
  * Date: 16/10/2018
  * Time: 10:37 PM
  */
-
 namespace AppData\Model;
-
 
 class registrar
 {
-    private  $nombre;
+    private $nombre, $pass, $nickname, $ap_p, $ap_m, $edad, $id_sexo, $id_tipo_usuario;
     private  $ap_paterno;
     private  $ap_materno;
     private  $id_usuario;
-    private  $edad;
-    private  $id_sexo;
 
     public function __construct()
     {
@@ -33,16 +29,39 @@ class registrar
         return $this->$atributo;
     }
 
-    function add()
-    {
-        $sql="insert into personas values('0','{$this->nombre}','{$this->ap_paterno}','{$this->ap_materno}','{$this->id_usuario}', '{$this->edad }'), '{$this->id_sexo }' )";
-        $this->conexion->QuerySimple($sql);
-    }
-
     function getAll()
     {
-        $sql="select * from personas order by  id_persona ASC";
+        $sql="select * from usuarios order by  id_usuario ASC";
         $datos= $this->conexion ->QueryResultado($sql);
         return $datos;
+    }
+
+    public function getOne(){
+        $sql="SELECT * FROM usuarios 
+        WHERE nickname='{$this->nickname}' 
+        AND pass='{$this->pass}' 
+        ORDER BY id_clasificacionkilo ASC";
+        $dato=$this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
+    public function getSex(){
+        $sql="SELECT * FROM sexos";
+        $dato=$this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
+    public function getTiUs(){
+        $sql="SELECT * FROM tipos_usuarios";
+        $dato=$this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
+    public function guarda() {
+        $sql="INSERT INTO usuarios (nickname, pass, id_tipo_usuario) VALUES ('{$this->nickname}','{$this->pass}','{$this->id_tipo_usuario}')";
+        //$sql="insert into usuarios values('0','{$this->nickname}','{$this->pass}','{$this->id_tipo_usuario}')";
+        //$sql="INSERT INTO usuarios (id_usuario, nickname, pass, id_tipo_usuario) VALUES ('0',''{$this->nickname}','{$this->pass}','{$this->id_tipo_usuario}')";
+        $this->conexion->QuerySimple($sql);
+        //INSERT INTO `usuarios`(`id_usuario`, `nickname`, `pass`, `id_tipo_usuario`) VALUES (22,'lady','1234',21)
     }
 }
