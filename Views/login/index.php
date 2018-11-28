@@ -23,6 +23,9 @@
                     <button type='submit' name='btn_login' class='btn btn-primary'>Entrar</button>
                 </div>
 
+
+
+
                 <div class="container">
                     <p class="text text-black-50 mx-auto mt-2 mb-10">¿Aún no tienes cuenta con nosotros?</p>
                     <a  href="<?php echo URL?>registrar" class="btn btn-primary js-scroll-trigger" id="signin">Registrate</a>
@@ -33,3 +36,4 @@
     </div>
 </div>
 </body>
+
