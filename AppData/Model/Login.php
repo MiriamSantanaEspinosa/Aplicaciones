@@ -5,7 +5,6 @@
  * Date: 01/10/2018
  * Time: 07:59 AM
  */
-
 namespace AppData\Model;
 class login
 {
@@ -35,7 +34,7 @@ class login
     }
 
     public function getOne(){
-        $sql="SELECT * FROM usuarios WHERE nickname='{$this->nickname}' AND pass='{$this->contraseña}'";
+        $sql="SELECT * FROM usuarios WHERE nickname='{$this->nickname}' AND pass='{$this->pass}'";
         $dato=$this->conexion->QueryResultado($sql);
         return $dato;
     }

@@ -42,7 +42,7 @@ class Enrutador //Se crea clase de enrutador
         }
         else
         {
-            echo "ruta no encontrada";
+            echo "Ruta no encontrada";
         }
     }
 }

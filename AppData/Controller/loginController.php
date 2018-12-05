@@ -10,6 +10,8 @@ namespace AppData\Controller;
 
 class loginController
 {
+
+
     private $login;
 
     public function __construct()
@@ -33,12 +35,28 @@ class loginController
             if (mysqli_num_rows($datos) > 0) {
                 $datos=mysqli_fetch_assoc($datos);
                 $_SESSION["nickname"]=$datos["pass"];
-                header("Location:" . URL . "base");
-
+                $_SESSION["nickname"]=$datos["nickname"] . " " . $datos["pass"];
+                ?>
+                <script type="text/javascript">
+		            swal("Acceso Exitoso", "Bienvenido", "success");
+                    setTimeout(function(){
+                    window.location.href = "<?php echo URL?>base";
+                    },1000)
+                </script>
+                <?php
             }
             else {
-                $_SESSION["error_login"] = "Nombre de usuario o Contraseña incorrectos";
-                header("Location:" . URL . "login");
+                ?>
+                <script type="text/javascript">
+                    <?php
+                        $_SESSION["error_login"] = "" ;
+                    ?>
+                        swal("Acceso denegado", "No se tinen registros de los datos ingresados", "error");
+                        setTimeout(function(){
+                        window.location.href = "<?php echo URL?>login";
+                        },2200)
+                </script>
+                <?php
             }
         }
     }

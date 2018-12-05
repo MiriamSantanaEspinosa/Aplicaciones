@@ -17,7 +17,7 @@
                     <?php if(!isset($_SESSION["username"]))
                     {?>
                     <div class="container">
-                        <a  href="<?php echo URL?>login" class="btn btn-primary js-scroll-trigger" id="sesion">Iniciar Sesión</a>
+                        <a  href="<?php echo URL?>login" class="btn btn-primary js-scroll-trigger" id="sesion" >Iniciar Sesión</a>
                     </div>
                     <?php }?>
                 </div>
