@@ -9,7 +9,7 @@
 namespace AppData\Model;
 
 
-class Personas
+class personas
 {
     private  $id_persona;
     private  $nombre;
@@ -36,13 +36,15 @@ class Personas
 
     function add()
     {
-        $sql="insert into personas values('0','{$this->nombre}','{$this->ap_paterno}','{$this->ap_materno}', '{$this->edad } ' ,'{$this->id_usuario}','{$this->id_sexo}')";
+        //$sql="insert into personas values('0','{$this->nombre}','{$this->ap_paterno}','{$this->ap_materno}', '{$this->edad } ' ,'{$this->id_usuario}','{$this->id_sexo}')";
+        $sql="insert into personas values('0','{$this->nombre}','{$this->ap_p}','{$this->ap_m}', '{$this->id_usuario } ' ,'{$this->edad}','{$this->id_sexo}')";
         $this->conexion->QuerySimple($sql);
     }
 
     function getAll()
     {
-        $sql="SELECT personas.id_persona, personas.nombre, personas.ap_paterno, personas.ap_materno, personas.edad, usuarios.id_usuario, sexos.id_sexo
+        $sql="SELECT personas.id_persona, personas.nombre, personas.ap_p, personas.ap_m,
+              usuarios.id_usuario, personas.edad,  sexos.id_sexo
               FROM personas, usuarios, sexos 
               WHERE personas.id_usuario = usuarios.id_usuario 
               and personas.id_sexo = sexos.id_sexo

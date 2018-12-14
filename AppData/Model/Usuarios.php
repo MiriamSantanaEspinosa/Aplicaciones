@@ -11,6 +11,7 @@ namespace AppData\Model;
 
 class Usuarios
 {
+    private  $tabla="Usuarios";
     private $id_usuario;
     private $nickname;
     private $pass;
@@ -33,17 +34,19 @@ class Usuarios
 
     function add()
     {
-        $sql="insert into usuarios values('0','{$this->nickname}','{$this->pass}','{$this->id_tipo_usuario}')";
+        //$sql="insert into {$this->tabla} values('0','{$this->nickname}','{$this->pass}')";
+        //$sql="insert into usuarios values('0','{$this->nickname}','{$this->pass}','{$this->id_tipo_usuario}')";
+        //$sql="INSERT INTO `usuarios`(`id_usuario`, `nickname`, `pass`, `id_tipo_usuario`) VALUES ('0','{$this->nickname}','{$this->pass}','{$this->id_tipo_usuario}')";
+        //$this->conexion->QuerySimple($sql);
+
+        $sql="insert into {$this->tabla} values('0','{$this->nickname}','{$this->pass}','{$this->id_usuario}')";
         $this->conexion->QuerySimple($sql);
     }
 
     function getAll()
     {
-        $sql="SELECT usuarios.id_usuario, usuarios.nickname, usuarios.pass, tipos_usuarios.id_tipo_usuario
-              FROM usuarios, tipos_usuarios 
-              WHERE usuarios.id_tipo_usuario = tipos_usuarios.id_tipo_usuario 
-              ORDER BY id_usuario ASC ";
-        $datos=$this->conexion->QueryResultado($sql);
+        $sql="select * from usuarios order by id_usuario ASC  ";
+        $datos=$this->conexion->queryResultado($sql);
         return $datos;
     }
 
@@ -62,9 +65,9 @@ class Usuarios
 
     function update(){
 
-        $sql="update usuarios set nickname='{$this->nickname}',
-               pass='{$this->pass}', id_tipo_usuario='{$this->id_tipo_usuario}' ,
-              where id_usuario='{$this->id_usuario}'";
-        $this->conexion->QuerySimple($sql);
+       // $sql="update usuarios set nickname='{$this->nickname}',
+         //      pass='{$this->pass}', id_tipo_usuario='{$this->id_tipo_usuario}' ,
+           //   where id_usuario='{$this->id_usuario}'";
+        //$this->conexion->QuerySimple($sql);
     }
 }

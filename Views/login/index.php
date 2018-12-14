@@ -10,13 +10,13 @@
                 <p>Por favor coloca tu cuenta y contraseña</p>
             </div>
 
-            <form id="regis" name="regis" class="form-signin" method="post" action="<?php echo URL?>login/Verify">
+            <form id="regis" name="regis" class="needs-validation"  method="post" action="<?php echo URL?>login/Verify">
                 <div class="form-group">
                     <input type="text" class="form-control" id="nickname" name="nickname" value="" placeholder="Nickname">
                 </div>
 
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pass" name="pass" value="" placeholder="Contraseña">
+                    <input type="password" class="form-control" id="pass" name="pass" value="" placeholder="Contraseña" required>
                 </div>
 
                 <div class="form-group">
@@ -26,7 +26,7 @@
 
                 <div class="container">
                     <p class="text text-black-50 mx-auto mt-2 mb-10">¿Aún no tienes cuenta con nosotros?</p>
-                    <a  href="<?php echo URL?>registrar" class="btn btn-primary js-scroll-trigger" id="signin">Registrate</a>
+                    <a  href="<?php echo URL?>personas" class="btn btn-primary js-scroll-trigger" id= required"signin">Registrate</a>
                 </div>
             </form>
         </div>
