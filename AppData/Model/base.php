@@ -28,16 +28,29 @@ class base
         return $this->$atributo;
     }
 
+    function getAll()
+    {
+        $sql="SELECT personas.id_persona, personas.nombre, personas.ap_p, personas.ap_m,
+              usuarios.id_usuario, personas.edad,  sexos.id_sexo
+              FROM personas, usuarios, sexos 
+              WHERE personas.id_usuario = usuarios.id_usuario 
+              and personas.id_sexo = sexos.id_sexo
+              ORDER BY id_persona ASC ";
+        $datos=$this->conexion->QueryResultado($sql);
+        return $datos;
+    }
+
     function getinfo()
     {
-        $sql="select personas.nombre, 
+        $sql="select 
+                    subidas.nombre_sub,
+                    personas.nombre, 
                      personas.ap_p,
                      personas.ap_m,  
-                     descargas.nombre_archivo,
-                     descargas.fecha,
-                     descargas.hora 
-              from descargas, personas, usuarios, tipos_usuarios 
-              where descargas.id_persona = personas.id_persona 
+                     subidas.fecha,
+                     subidas.hora 
+              from subidas, personas, usuarios, tipos_usuarios 
+              where subidas.id_persona = personas.id_persona 
               and personas.id_usuario = usuarios.id_usuario 
               and usuarios.id_tipo_usuario = tipos_usuarios.id_tipo_usuario";
         $datos = $this->conexion->QueryResultado($sql);

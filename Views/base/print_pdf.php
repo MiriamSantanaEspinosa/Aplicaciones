@@ -23,7 +23,7 @@ $pdf->ln();
 $pdf->SetFont('Arial','B',30);
 $pdf->SetTextColor('32','118','193');
 $pdf->SetX(3);
-$pdf->Cell(0,3,'Reporte de Descargas',0,0,'L');
+$pdf->Cell(0,3,'Documentos subidos',0,0,'L');
 $pdf->ln();
 
 $pdf->SetFillColor(0,220,255);
@@ -33,7 +33,7 @@ $pdf->SetX(2);
 $pdf->Cell(4,1.5,utf8_decode('Nombre'),1,0,'C',true);
 $pdf->Cell(4,1.5,utf8_decode('Apellido Paterno'),1,0,'C',true);
 $pdf->Cell(4,1.5,utf8_decode('Apellido Materno'),1,0,'C',true);
-$pdf->Cell(4.4,1.5,utf8_decode('Archivo descargado'),1,0,'C',true);
+$pdf->Cell(4.4,1.5,utf8_decode('Archivo subido'),1,0,'C',true);
 $pdf->Cell(4,1.5,utf8_decode('Fecha'),1,0,'C',true);
 $pdf->Cell(4,1.5,utf8_decode('Hora'),1,0,'C',true);
 $pdf->SetFillColor(255,255, 255);
