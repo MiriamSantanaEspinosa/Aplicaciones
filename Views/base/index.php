@@ -17,10 +17,20 @@
 
 <body id="LoginForm">
 <div class="container" align="center">
-        <a data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary">Actas</a>
-        <a data-toggle="modal" data-target="#squarespaceModal1" class="btn btn-primary">Informes</a>
-        <a data-toggle="modal" data-target="#squarespaceModal2" class="btn btn-primary">Reportes</a>
-        <a data-toggle="modal" data-target="#squarespaceModal3" class="btn btn-primary">Pendientes</a>
+    <h4>Subir documentos</h4>
+        <a data-toggle="modal" data-target="#squarespaceModal" class="btn btn-primary"> Actas</a>
+        <a data-toggle="modal" data-target="#squarespaceModal1" class="btn btn-primary"> Informes</a>
+        <a data-toggle="modal" data-target="#squarespaceModal2" class="btn btn-primary"> Reportes</a>
+        <a data-toggle="modal" data-target="#squarespaceModal3" class="btn btn-primary"> Pendientes</a>
+</div>
+<br><br>
+
+<div align="center">
+    <h4>Descargar documentos</h4>
+    <a data-toggle="modal" data-target="#descarga" class="btn btn-primary">Actas</a>
+    <a data-toggle="modal" data-target="#descarga2" class="btn btn-primary">Informes</a>
+    <a data-toggle="modal" data-target="#descarga3" class="btn btn-primary">Reportes</a>
+    <a data-toggle="modal" data-target="#descarga4" class="btn btn-primary">Pendientes</a>
 </div>
 
 <div  class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -34,14 +44,11 @@
 
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file" method="post" enctype="multipart/form-data">
-                    Seleccione archivo:<input type="file" name="archivo" id="archivo"> </input>
-
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
 
                     <br><br>
-                    <br><br>
-                    <input type="submit" value="Subir archivo"> </input>
+                    <input  type="submit" value="Subir archivo"> </input>
                 </form>
-
             </div>
 
 
@@ -60,10 +67,10 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file1" method="post" enctype="multipart/form-data">
-                    <input type="file"  name="archivo" id="archivo"> </input>
-                    <br><br> Nombre: <input id="nombre" name="nombre" type="text" size="70" maxlength="70">
-                    <br><br> Descripcion: <input id="description" name="description" type="text" size="100" maxlength="250">
-                    <input name="submit" type="submit" value="SUBIR ARCHIVO">
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" requiered> </input>
+
+                    <br><br>
+                    <input type="submit" value="Subir archivo"> </input>
                 </form>
             </div>
         </div>
@@ -80,7 +87,8 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file2" method="post" enctype="multipart/form-data">
-                    <input type="file"  name="archivo" id="archivo"> </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                    <br><br>
                     <input type="submit"  value="Subir archivo"> </input>
                 </form>
             </div>
@@ -98,7 +106,8 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file3" method="post" enctype="multipart/form-data">
-                    <input type="file"  name="archivo" id="archivo"> </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                    <br><br>
                     <input type="submit"  value="Subir archivo"> </input>
                 </form>
             </div>
@@ -106,6 +115,115 @@
     </div>
 </div>
 
+</div>
+
+<div class="modal fade" id="descarga" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="lineModalLabel" >Descargar </h3>
+                <a class="close" data-dismiss="modal"><span aria-hidden="true">×</span> </a>
+            </div>
+            <div class="modal-body" enctype="multipart/form-data">
+                 <?php
+                    $dir='C:/xampp/htdocs/Aplicaciones/Views/base/subidas/Actas/';
+
+                    $directorio=opendir($dir);
+                //    echo "<b>Directorio actual:</b><br>$dir<br>";
+                    echo "<b>Archivos:</b><br>";
+                    while ($archivo = readdir($directorio)) {
+                        echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Actas/$archivo'> Descargar <br></a>";
+                    }
+                    include('descarga.php');
+                    closedir($directorio);
+                    ?>
+                    <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="descarga2" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="lineModalLabel" >Descargar </h3>
+                <a class="close" data-dismiss="modal"><span aria-hidden="true">×</span> </a>
+            </div>
+            <div class="modal-body" enctype="multipart/form-data">
+                <?php
+                $dir='C:/xampp/htdocs/Aplicaciones/Views/base/subidas/Informes/';
+
+                $directorio=opendir($dir);
+                //echo "<b>Directorio actual:</b><br>$dir<br>";
+                echo "<b>Archivos:</b><br>";
+                while ($archivo = readdir($directorio)) {
+                    echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Informes/$archivo'> Descargar <br></a>";
+                }
+                include('descarga.php');
+                closedir($directorio);
+                ?>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="descarga3" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="lineModalLabel" >Descargar </h3>
+                <a class="close" data-dismiss="modal"><span aria-hidden="true">×</span> </a>
+            </div>
+            <div class="modal-body" enctype="multipart/form-data">
+                <?php
+                $dir='C:/xampp/htdocs/Aplicaciones/Views/base/subidas/Reportes/';
+
+                $directorio=opendir($dir);
+                //echo "<b>Directorio actual:</b><br>$dir<br>";
+                echo "<b>Archivos:</b><br>";
+                while ($archivo = readdir($directorio)) {
+                    echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Reportes/$archivo'> Descargar <br></a>";
+                }
+                include('descarga.php');
+                closedir($directorio);
+                ?>
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="descarga4" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h3 class="modal-title" id="lineModalLabel" >Descargar </h3>
+                <a class="close" data-dismiss="modal"><span aria-hidden="true">×</span> </a>
+            </div>
+            <div class="modal-body" enctype="multipart/form-data">
+                <?php
+                $dir='C:/xampp/htdocs/Aplicaciones/Views/base/subidas/Pendientes/';
+
+                $directorio=opendir($dir);
+                //echo "<b>Directorio actual:</b><br>$dir<br>";
+                echo "<b>Archivos:</b><br>";
+                while ($archivo = readdir($directorio)) {
+                    echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Pendientes/$archivo'> Descargar <br></a>";
+                }
+                include('descarga.php');
+                closedir($directorio);
+                ?>
+                <br><br>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 

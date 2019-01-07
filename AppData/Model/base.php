@@ -43,16 +43,9 @@ class base
     function getinfo()
     {
         $sql="select 
-                    subidas.nombre_sub,
-                    personas.nombre, 
-                     personas.ap_p,
-                     personas.ap_m,  
-                     subidas.fecha,
-                     subidas.hora 
-              from subidas, personas, usuarios, tipos_usuarios 
-              where subidas.id_persona = personas.id_persona 
-              and personas.id_usuario = usuarios.id_usuario 
-              and usuarios.id_tipo_usuario = tipos_usuarios.id_tipo_usuario";
+                    archivos.nombre,tipo,size        
+              from archivos 
+              ";
         $datos = $this->conexion->QueryResultado($sql);
         return $datos;
 
