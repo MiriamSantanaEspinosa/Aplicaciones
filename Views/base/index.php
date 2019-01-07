@@ -34,14 +34,11 @@
 
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file" method="post" enctype="multipart/form-data">
-                    Seleccione archivo:<input type="file" name="archivo" id="archivo"> </input>
-
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
 
                     <br><br>
-                    <br><br>
-                    <input type="submit" value="Subir archivo"> </input>
+                    <input  type="submit" value="Subir archivo"> </input>
                 </form>
-
             </div>
 
 
@@ -60,10 +57,10 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file1" method="post" enctype="multipart/form-data">
-                    <input type="file"  name="archivo" id="archivo"> </input>
-                    <br><br> Nombre: <input id="nombre" name="nombre" type="text" size="70" maxlength="70">
-                    <br><br> Descripcion: <input id="description" name="description" type="text" size="100" maxlength="250">
-                    <input name="submit" type="submit" value="SUBIR ARCHIVO">
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" requiered> </input>
+
+                    <br><br>
+                    <input type="submit" value="Subir archivo"> </input>
                 </form>
             </div>
         </div>
@@ -80,7 +77,8 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file2" method="post" enctype="multipart/form-data">
-                    <input type="file"  name="archivo" id="archivo"> </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                    <br><br>
                     <input type="submit"  value="Subir archivo"> </input>
                 </form>
             </div>
@@ -98,7 +96,8 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file3" method="post" enctype="multipart/form-data">
-                    <input type="file"  name="archivo" id="archivo"> </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                    <br><br>
                     <input type="submit"  value="Subir archivo"> </input>
                 </form>
             </div>

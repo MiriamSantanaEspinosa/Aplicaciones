@@ -11,7 +11,7 @@ class baseController
 {
     private $contenido;
     private $Personas;
-    private $subidas;
+    private $archivos;
 
 
     public function __construct()
