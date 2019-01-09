@@ -8,8 +8,9 @@
 ?>
 <h1 align="center">Bienvenido</h1>
 
-<div align="center" >
-    <a href="<?php echo URL?>base/print_pdf" target="_blank" id="imprimir_pdf" class=" btn btn-primary black-text tooltipped " data-position="bottom" data-delay="50" data-tooltip="Imprimir"><i class="material-icons">Documentos Subidos</i></a>
+<div align="center">
+        <a href="<?php echo URL?>base/print_pdf" target="_blank" id="imprimir_pdf" class=" btn btn-primary black-text tooltipped " data-position="bottom" data-delay="50" data-tooltip="Imprimir"><i class="material-icons">Documentos Subidos</i></a>
+        <a href="<?php echo URL?>base/logout" id="cerrar" class=" btn btn-primary black-text tooltipped" data-position="bottom" data-delay="50" data-tooltip="Imprimir"><i class="material-icons" >Cerrar sesión</i></a>
 </div>
 
 <br>
@@ -45,14 +46,10 @@
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file" method="post" enctype="multipart/form-data">
                     Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
-
                     <br><br>
                     <input  type="submit" value="Subir archivo"> </input>
                 </form>
             </div>
-
-
-
         </div>
     </div>
 </div>
@@ -126,14 +123,15 @@
                 <a class="close" data-dismiss="modal"><span aria-hidden="true">×</span> </a>
             </div>
             <div class="modal-body" enctype="multipart/form-data">
+
                  <?php
-                    $dir='C:/xampp/htdocs/Aplicaciones/Views/base/subidas/Actas/';
+                 $dir='C:/xampp/htdocs/Aplicaciones/Views/base/subidas/Actas/';
 
                     $directorio=opendir($dir);
                 //    echo "<b>Directorio actual:</b><br>$dir<br>";
                     echo "<b>Archivos:</b><br>";
                     while ($archivo = readdir($directorio)) {
-                        echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Actas/$archivo'> Descargar <br></a>";
+                        echo " $archivo   <a target='_blank' href='http://localhost/Aplicaciones/Views/base/subidas/Actas/$archivo' > Descargar  <br></a>";
                     }
                     include('descarga.php');
                     closedir($directorio);
@@ -161,7 +159,7 @@
                 //echo "<b>Directorio actual:</b><br>$dir<br>";
                 echo "<b>Archivos:</b><br>";
                 while ($archivo = readdir($directorio)) {
-                    echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Informes/$archivo'> Descargar <br></a>";
+                    echo "$archivo <a target='_blank' href='http://localhost/Aplicaciones/Views/base/subidas/Informes/$archivo'> Descargar <br></a>";
                 }
                 include('descarga.php');
                 closedir($directorio);
@@ -188,7 +186,7 @@
                 //echo "<b>Directorio actual:</b><br>$dir<br>";
                 echo "<b>Archivos:</b><br>";
                 while ($archivo = readdir($directorio)) {
-                    echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Reportes/$archivo'> Descargar <br></a>";
+                    echo "$archivo <a target='_blank' href='http://localhost/Aplicaciones/Views/base/subidas/Reportes/$archivo'> Descargar <br></a>";
                 }
                 include('descarga.php');
                 closedir($directorio);
@@ -215,7 +213,7 @@
                 //echo "<b>Directorio actual:</b><br>$dir<br>";
                 echo "<b>Archivos:</b><br>";
                 while ($archivo = readdir($directorio)) {
-                    echo "$archivo <a href='http://localhost/Aplicaciones/Views/base/subidas/Pendientes/$archivo'> Descargar <br></a>";
+                    echo "$archivo <a target='_blank' href='http://localhost/Aplicaciones/Views/base/subidas/Pendientes/$archivo'> Descargar <br></a>";
                 }
                 include('descarga.php');
                 closedir($directorio);
@@ -226,7 +224,6 @@
     </div>
 </div>
 </body>
-
 
 
 

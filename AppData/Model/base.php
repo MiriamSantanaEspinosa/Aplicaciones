@@ -43,7 +43,7 @@ class base
     function getinfo()
     {
         $sql="select 
-                    archivos.nombre,tipo,size        
+                    archivos.nombre,tipo,size,usuario,fecha,time        
               from archivos 
               ";
         $datos = $this->conexion->QueryResultado($sql);

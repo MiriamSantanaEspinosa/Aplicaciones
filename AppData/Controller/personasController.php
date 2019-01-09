@@ -57,7 +57,7 @@ class personasController
             $datos4=$this->Usuarios->getAll();
             $datos[3]=$datos4;
 
-            if (mysqli_num_rows($datos[0]) > 0 ) { ?>
+            if (mysqli_num_rows($datos[3]) > 0 ) { ?>
                 <script type="text/javascript">
                     swal("Registro exitoso", "", "success");
                     setTimeout(function(){

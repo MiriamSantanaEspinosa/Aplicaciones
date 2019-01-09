@@ -12,7 +12,7 @@
 
             <form id="regis" name="regis" class="needs-validation"  method="post" action="<?php echo URL?>login/Verify">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="nickname" name="nickname" value="" placeholder="Nickname">
+                    <input type="email" class="form-control" id="nickname" name="nickname" value="" placeholder="Correo electrónico">
                 </div>
 
                 <div class="form-group">

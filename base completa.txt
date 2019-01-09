@@ -1,5 +1,7 @@
 create table personas (id_persona int primary key auto_increment, nombre varchar(20), ap_p varchar(20), ap_m varchar(20), id_usuario int, edad int, id_sexo int);
+
 create table usuarios (id_usuario int primary key auto_increment, nickname varchar(20), pass varchar(20), id_tipo_usuario int);
+
 create table sexos (id_sexo int primary key auto_increment, descripcion varchar(20));
 create table tipos_usuarios (id_tipo_usuario int primary key auto_increment, descripcion varchar(20));
 create table subidas (id_subida int primary key auto_increment, nombre_sub varchar(30), id_persona int, fecha date, hora time);
@@ -11,11 +13,12 @@ insert into sexos values (11, 'Femenino');
 insert into tipos_usuarios values (20, 'Administrador');
 insert into tipos_usuarios values (21, 'Usuario');
 
-insert into Usuarios values (20, 'Alex', '123456789',21);
-insert into Usuarios values (21, 'Mary', '123456789',20);
+insert into Usuarios values (20, 'Alex@gmail.com', '123456789',21);
+insert into Usuarios values (21, 'Mary@gmail.com', '123456789',20);
 
 insert into personas values (40,'Alexander','Orozco','Salmeron', 20, 22, 10 );
 insert into personas values (41,'Maricruz','Valdez','Camacho', 21, 21, 11 );
+insert into personas values (42,'Miriam','Santana','Espinosa', 21, 21, 11 );
 
 insert into subidas values (50, 'Informes', 40, '9/11/2018', '02:30');
 insert into subidas values (51, 'Reportes', 41, '9/11/2018', '03:30');

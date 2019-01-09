@@ -34,13 +34,13 @@ class loginController
             $datos = $this->login->Verify();
             if (mysqli_num_rows($datos) > 0) {
                 $datos=mysqli_fetch_assoc($datos);
-                $_SESSION["nickname"]=$datos["pass"];
-                $_SESSION["nickname"]=$datos["nickname"] . " " . $datos["pass"];
+                $_SESSION['nickname']=$datos['nickname'];
+                //$_SESSION["nickname"]=$datos["nickname"] . " " . $datos["pass"];
                 ?>
                 <script type="text/javascript">
-		            swal("Acceso Exitoso", "Bienvenido", "success");
+                    swal("Acceso Exitoso", "Bienvenido", "success");
                     setTimeout(function(){
-                    window.location.href = "<?php echo URL?>base";
+                        window.location.href = "<?php echo URL?>base";
                     },1000)
                 </script>
                 <?php
@@ -49,12 +49,12 @@ class loginController
                 ?>
                 <script type="text/javascript">
                     <?php
-                        $_SESSION["error_login"] = "" ;
+                    $_SESSION["error_login"] = "" ;
                     ?>
-                        swal("Acceso denegado", "No se tinen registros de los datos ingresados", "error");
-                        setTimeout(function(){
+                    swal("Acceso denegado", "No se tinen registros de los datos ingresados", "error");
+                    setTimeout(function(){
                         window.location.href = "<?php echo URL?>login";
-                        },2200)
+                    },2200)
                 </script>
                 <?php
             }

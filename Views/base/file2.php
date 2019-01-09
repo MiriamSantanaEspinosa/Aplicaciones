@@ -38,25 +38,49 @@ else
         $upload= $ruta . $nombrefinal;
 
         if(move_uploaded_file($_FILES['archivo']['tmp_name'], $upload)) {
-
             ?>
             <div align="center">
                 <?php
                 echo "<b> Este es el archivo que acabas de subir:</b><br>";
 
                 ?>
-                <br><br>
+                <br>
                 <?php
                 echo "Nombre: <i><a target='_blank' href=\"".$ruta2. $nombrefinal."\">".$_FILES['archivo']['name']."</a></i><br>";
                 echo "Tipo MIME: <i>".$_FILES['archivo']['type']."</i><br>";
                 echo "Peso: <i>".$_FILES['archivo']['size']." bytes</i><br>";
-                echo "<br><hr><br>";
 
                 ?>
+                <br>
+                <?php
+
+                echo "<b> Responsable:</b><br>";
+                ?>
+                <br>
+                <?php
+
+                echo "Tu eres: " . $_SESSION['nickname'];
+                ?>
+                <br>
+                <?php
+                echo "Hoy es dia: ".date_default_timezone_set('america/mexico_city');  echo date('Y-m-d', time());
+                ?>
+                <br>
+                <?php
+                echo "La hora es: ".date('H:i:s', time());
+                echo "<br><hr><br>";
+                ?>
             </div>
+
             <?php
-            $sql = "INSERT INTO archivos (nombre,tipo,size) 
-                VALUES ('".$nombrefinal."','".$_FILES['archivo']['type']."','".$_FILES['archivo']['size']."')";
+
+            $fecha  =date('Y-m-d', time());
+            $hora  = date('H:i:s', time());
+            $user = $_SESSION["nickname"];
+
+
+            $sql = "INSERT INTO archivos (nombre,tipo,size,usuario,fecha,time) 
+                VALUES ('".$nombrefinal."','".$_FILES['archivo']['type']."','".$_FILES['archivo']['size']."','".$user."','".$fecha."','".$hora."')";
 
             if (mysqli_query($con, $sql)){
                 //echo "Dato insertado exitosamente";

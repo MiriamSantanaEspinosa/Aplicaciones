@@ -43,9 +43,10 @@
                         }
                         ?>
                     </select>
+                    <br>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Nickname" value="" required>
+                        <input type="email" class="form-control" id="nickname" name="nickname" placeholder="Correo electrónico" value="" required>
                     </div>
 
                     <div class="form-group">
@@ -65,7 +66,7 @@
 
                     <br>
                     <div class="container">
-                        <button id="registrar" type="submit" value="" class="btn btn-primary" href="<?php echo URL?>login"   >Registrar  </button>
+                        <button id="registrar" type="submit" value="" class="btn btn-primary" href="<?php echo URL?>login">Registrar  </button>
                     </div>
                 </div>
             </form>
