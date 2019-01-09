@@ -63,10 +63,10 @@ class Template
                                 <a class="nav-link js-scroll-trigger text-white" href="#hace">Que hacemos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger text-white" href="#info">Quienes somos</a>
+                                <a class="nav-link js-scroll-trigger text-white"  href="<?php echo URL?>Quienes-somos">Quienes somos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger text-white" href="#contac">Contactanos</a>
+                                <a class="nav-link js-scroll-trigger text-white" href="<?php echo URL?>contacto">Contactanos</a>
                             </li>
                         </ul>
                     </div>
