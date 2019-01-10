@@ -53,20 +53,17 @@ class Template
             <title>SaveInfo</title>
             <nav class=" bg navbar navbar-expand-lg navbar-light bg-info fixed-top text-white"  >
                 <div class="container">
-                    <a class="navbar-brand js-scroll-trigger text-white" href="<?php echo URL?>login" class="" id="sesion ">SAVEINFO</a>
+                    <a class="navbar-brand js-scroll-trigger text-white" href="<?php echo URL?>inicio" class="" id="sesion ">SAVEINFO</a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                     </button>
                     <div class="collapse navbar-collapse " id="navbarResponsive">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger text-white" href="#hace">Que hacemos</a>
+                                <a class="nav-link js-scroll-trigger text-white"  href="<?php echo URL?>Quienes-somos">Quiénes somos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger text-white"  href="<?php echo URL?>Quienes-somos">Quienes somos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link js-scroll-trigger text-white" href="<?php echo URL?>contacto">Contactanos</a>
+                                <a class="nav-link js-scroll-trigger text-white" href="<?php echo URL?>contacto">Contáctanos</a>
                             </li>
                         </ul>
                     </div>

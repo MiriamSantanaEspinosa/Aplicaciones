@@ -86,9 +86,8 @@ else
                 //echo "Dato insertado exitosamente";
             }
             else{
-                echo "Error:" . $sql . "<br>" . mysqli_error($con);
+                echo "Error al ejecutar Query:" . $sql . "<br>" . mysqli_error($con);
             }
-
         }
     }
 
@@ -97,10 +96,5 @@ else
         <a  href="<?php echo URL?>base" class="btn btn-primary js-scroll-trigger" id="base" >Regresar</a>
     </div>
     <?php
-
 }
-
 ?>
-
-
-

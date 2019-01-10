@@ -16,6 +16,13 @@
 <br>
 <br>
 
+<div align="center">
+    <?php
+    echo "Bienvenido: " . $_SESSION['nickname'];
+    ?>
+</div>
+
+<br>
 <body id="LoginForm">
 <div class="container" align="center">
     <h4>Subir documentos</h4>
@@ -44,8 +51,8 @@
             </div>
 
             <div class="modal-body">
-                <form action="<?php echo URL?>base/file" method="post" enctype="multipart/form-data">
-                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                <form action="<?php echo URL?>base/file" method="post" enctype="multipart/form-data" type="pdf">
+                    Seleccione archivo:<input  type="file" name="archivo" id="archivo" accept=".docx, .pdf"  > </input>
                     <br><br>
                     <input  type="submit" value="Subir archivo"> </input>
                 </form>
@@ -64,7 +71,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file1" method="post" enctype="multipart/form-data">
-                    Seleccione archivo:<input type="file" name="archivo" id="archivo" requiered> </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" accept=".docx, .pdf"> </input>
 
                     <br><br>
                     <input type="submit" value="Subir archivo"> </input>
@@ -84,7 +91,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file2" method="post" enctype="multipart/form-data">
-                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" accept=".docx, .pdf" > </input>
                     <br><br>
                     <input type="submit"  value="Subir archivo"> </input>
                 </form>
@@ -103,7 +110,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?php echo URL?>base/file3" method="post" enctype="multipart/form-data">
-                    Seleccione archivo:<input type="file" name="archivo" id="archivo" > </input>
+                    Seleccione archivo:<input type="file" name="archivo" id="archivo" accept=".docx, .pdf"> </input>
                     <br><br>
                     <input type="submit"  value="Subir archivo"> </input>
                 </form>

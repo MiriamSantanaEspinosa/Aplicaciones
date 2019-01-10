@@ -6,6 +6,8 @@
  * Time: 10:47 PM
  */
 include 'config.php';
+
+
 if ($_FILES['archivo']["error"] > 0)
   {
       ?>
@@ -21,7 +23,6 @@ else
     {
     if(is_uploaded_file($_FILES['archivo']['tmp_name']))
     {
-
         ?>
         <script type="text/javascript">
         swal("Subiendo archivo", "Archivo cargado exitosamente", "success");
